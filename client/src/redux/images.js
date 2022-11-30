@@ -7,6 +7,29 @@ const initialState = {
   images: [],
   previous: null,
   next: null,
+  categories: [
+    "backgrounds",
+    "fashion",
+    "nature",
+    "science",
+    "education",
+    "feelings",
+    "health",
+    "people",
+    "religion",
+    "places",
+    "animals",
+    "industry",
+    "computer",
+    "food",
+    "sports",
+    "transportation",
+    "travel",
+    "buildings",
+    "business",
+    "music",
+    "flowers",
+  ],
 };
 const imagesHandeling = {
   next(state, action) {
@@ -18,7 +41,7 @@ const imagesHandeling = {
   },
   setCategory(state, action) {
     state.category = action.payload;
-    state.page=1;
+    state.page = 1;
   },
   setImages(state, action) {
     console.log(action.payload);

@@ -7,7 +7,7 @@ import CardImage from "./CardImage";
 import { useSelector, useDispatch } from "react-redux";
 import SelectBox from "./SelectBox";
 import actions from "../redux/actions";
-
+import Modal from "./Modal";
 const ImagesList = () => {
   const dispatch = useDispatch();
   const images = useSelector((state) => state.images);
@@ -44,9 +44,7 @@ const ImagesList = () => {
               </Button>
             </Col>
             <Col>
-              <SelectBox variant="primary" className="ModalBtn">
-                Select Category
-              </SelectBox>
+              <Modal type="category"/>
             </Col>
             <Col>
               <Button className="NextBtn" onClick={nextPage}>
